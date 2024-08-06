@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gertrude's Children's Hospital Telemedicine</title>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+    }
+    header, footer {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    h1 {
+      margin: 20px 0;
+    }
+    .btn-branch {
+      width: 100%;
+      margin: 10px 0;
+      font-size: 1.2em;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Gertrude's Children's Hospital</h1>
+  </header>
+
+  <div class="container">
+    <h2>Select Branch for Telemedicine</h2>
+    <div class="list-group">
+      <button type="button" class="btn btn-primary btn-branch" onclick="startCall('192.168.74.3:5883')">Homa Bay <span class="badge badge-light">656</span></button>
+      <button type="button" class="btn btn-primary btn-branch" onclick="startCall('192.168.71.3:5883')">Lamu <span class="badge badge-light">651</span></button>
+      <button type="button" class="btn btn-primary btn-branch" onclick="startCall('192.168.72.12:5883')">Samburu <span class="badge badge-light">652</span></button>
+      <button type="button" class="btn btn-primary btn-branch" onclick="startCall('192.168.73.12:5883')">Chemoligot <span class="badge badge-light">653</span></button>
+      <button type="button" class="btn btn-primary btn-branch" onclick="startCall('192.168.75.12:5883')">Marigat  <span class="badge badge-light">654</span></button>
+      <button type="button" class="btn btn-primary btn-branch" onclick="startCall('192.168.78.4:5883')">Talek(Narok) <span class="badge badge-light">655</span></button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Gertrude's Children's Hospital. All rights reserved.</p>
+  </footer>
+
+ <!-- <script src = 'index.js'> -->
+<script>
+    function startCall(ipAddress) {
+    window.location.href = `https://${ipAddress}`;
+  }
+  </script>
+</body>
+</html>
